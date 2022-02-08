@@ -14,6 +14,3 @@ TEAMS kann über verschiedene Möglichkeiten installiert worden sein
 2. Machine Wide Installation  
 3. Im User Contex (APPDATA)  
 
-
-##Teams Clean Up Script  
-https://lazyadmin.nl/powershell/microsoft-teams-uninstall-reinstall-and-cleanup-guide-scripts/
