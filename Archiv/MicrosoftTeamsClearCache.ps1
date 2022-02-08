@@ -1,4 +1,3 @@
-# Author: Mark Vale
 
 $clearCache = Read-Host "Do you want to delete the Teams Cache (Y/N)?"
 $clearCache = $clearCache.ToUpper()
