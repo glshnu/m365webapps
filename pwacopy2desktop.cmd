@@ -1,0 +1,1 @@
+copy "L:\WebApps\*.*" %userprofile%\desktop
