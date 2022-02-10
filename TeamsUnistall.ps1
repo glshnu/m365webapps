@@ -54,9 +54,9 @@ else {
 Write-Host "Clearing Teams Files" -ForegroundColor Yellow
 
 try{
-    Get-ChildItem -Path $env:APPDATA\"Microsoft\teams\" | Remove-Item -Confirm:$false
-    Get-ChildItem -Path $env:LOCALAPPDATA\"Microsoft\teams\" | Remove-Item -Confirm:$false
-    Get-ChildItem -Path $env:LOCALAPPDATA\"Microsoft\TeamsPresenceAddin\" | Remove-Item -Confirm:$false
+    Get-ChildItem -Path $env:APPDATA\"Microsoft\teams\" | Remove-Item -Confirm:$false -Recurse -Confirm:$false
+    Get-ChildItem -Path $env:LOCALAPPDATA\"Microsoft\teams\" | Remove-Item -Confirm:$false -Recurse -Confirm:$false
+    Get-ChildItem -Path $env:LOCALAPPDATA\"Microsoft\TeamsPresenceAddin\" | Remove-Item -Confirm:$false -Recurse -Confirm:$false
     Write-Host "Teams Disk Cleaned" -ForegroundColor Green
 }catch{
     echo $_
@@ -75,8 +75,8 @@ try{
 Write-Host "Clearing Chrome Cache" -ForegroundColor Yellow
 
 try{
-    Get-ChildItem -Path $env:LOCALAPPDATA"\Google\Chrome\User Data\Default\Cache" | Remove-Item -Confirm:$false
-    Get-ChildItem -Path $env:LOCALAPPDATA"\Google\Chrome\User Data\Default\Web Data" -File | Remove-Item -Confirm:$false
+    Get-ChildItem -Path $env:LOCALAPPDATA"\Google\Chrome\User Data\Default\Cache" | Remove-Item -Confirm:$false -Recurse -Confirm:$false
+    Get-ChildItem -Path $env:LOCALAPPDATA"\Google\Chrome\User Data\Default\Web Data" -File | Remove-Item -Confirm:$false -Recurse -Confirm:$false
     Write-Host "Chrome Cleaned" -ForegroundColor Green
 }catch{
     echo $_
